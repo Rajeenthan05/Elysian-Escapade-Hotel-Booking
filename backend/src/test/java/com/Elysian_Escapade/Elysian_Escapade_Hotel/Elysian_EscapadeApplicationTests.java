@@ -9,5 +9,4 @@ class Elysian_EscapadeApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
