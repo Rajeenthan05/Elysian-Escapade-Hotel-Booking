@@ -1,6 +1,5 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.dto;
 
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
