@@ -1,6 +1,5 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.entity;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Min;
