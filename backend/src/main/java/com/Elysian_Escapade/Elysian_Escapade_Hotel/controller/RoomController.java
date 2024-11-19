@@ -1,6 +1,5 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.controller;
 
-
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.dto.Response;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.service.interfac.IBookingService;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.service.interfac.IRoomService;
@@ -18,12 +17,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/rooms")
 public class RoomController {
-
+    
     @Autowired
     private IRoomService roomService;
     @Autowired
     private IBookingService iBookingService;
-
 
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -103,6 +101,5 @@ public class RoomController {
         return ResponseEntity.status(response.getStatusCode()).body(response);
 
     }
-
 
 }
