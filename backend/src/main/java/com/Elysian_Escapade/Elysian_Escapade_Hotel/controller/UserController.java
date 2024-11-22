@@ -1,4 +1,3 @@
-
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.controller;
 
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.dto.Response;
@@ -98,7 +97,6 @@ public class RoomController
                                                @RequestParam(value = "roomType", required = false) String roomType,
                                                @RequestParam(value = "roomPrice", required = false) BigDecimal roomPrice,
                                                @RequestParam(value = "roomDescription", required = false) String roomDescription
-
     ) 
     {
         Response response = roomService.updateRoom(roomId, roomDescription, roomType, roomPrice, photo);
