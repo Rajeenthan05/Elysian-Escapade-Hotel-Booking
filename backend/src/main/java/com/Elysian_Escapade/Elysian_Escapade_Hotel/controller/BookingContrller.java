@@ -1,5 +1,6 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.controller;
 
+
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.dto.Response;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.entity.Booking;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.service.interfac.IBookingService;
@@ -20,8 +21,8 @@ public class BookingController {
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('USER')")
     public ResponseEntity<Response> saveBookings(@PathVariable Long roomId,
                                                  @PathVariable Long userId,
-                                                 @RequestBody Booking bookingRequest) 
-    {
+                                                 @RequestBody Booking bookingRequest) {
+
 
         Response response = bookingService.saveBooking(roomId, userId, bookingRequest);
         return ResponseEntity.status(response.getStatusCode()).body(response);
@@ -36,18 +37,17 @@ public class BookingController {
     }
 
     @GetMapping("/get-by-confirmation-code/{confirmationCode}")
-    public ResponseEntity<Response> getBookingByConfirmationCode(@PathVariable String confirmationCode) 
-    {
+    public ResponseEntity<Response> getBookingByConfirmationCode(@PathVariable String confirmationCode) {
         Response response = bookingService.findBookingByConfirmationCode(confirmationCode);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
 
     @DeleteMapping("/cancel/{bookingId}")
     @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('USER')")
-    public ResponseEntity<Response> cancelBooking(@PathVariable Long bookingId) 
-    {
+    public ResponseEntity<Response> cancelBooking(@PathVariable Long bookingId) {
         Response response = bookingService.cancelBooking(bookingId);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
+
 
 }
