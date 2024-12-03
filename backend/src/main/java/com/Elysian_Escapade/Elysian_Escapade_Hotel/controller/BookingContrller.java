@@ -1,6 +1,5 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.controller;
 
-
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.dto.Response;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.entity.Booking;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.service.interfac.IBookingService;
