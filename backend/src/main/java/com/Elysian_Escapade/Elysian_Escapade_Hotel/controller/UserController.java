@@ -1,6 +1,5 @@
 package com.Elysian_Escapade.Elysian_Escapade_Hotel.controller;
 
-
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.dto.Response;
 import com.Elysian_Escapade.Elysian_Escapade_Hotel.service.interfac.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/users")
 public class UserController {
 
-
     @Autowired
     private IUserService userService;
-
 
     @GetMapping("/all")
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -53,6 +50,5 @@ public class UserController {
         Response response = userService.getUserBookingHistory(userId);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
-
 
 }
